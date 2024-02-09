@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    background: rgb(171, 213, 246);
+    background: linear-gradient(160deg, rgba(171, 213, 246, 0.40926106770833337) 22%, rgba(148, 180, 243, 0.28321064754026615) 58%, rgba(69, 171, 252, 0.10393893885679273) 100%);
+}
+
+.container::after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    top: 5rem;
+    left: 15rem;
+    height: 200px;
+    width: 200px;
+    filter: blur(5px);
+    border-radius: 50%;
+    background: rgb(51, 153, 233);
+    background: linear-gradient(160deg, rgba(51, 153, 233, 0.8042190509016106) 22%, rgba(118, 69, 252, 0.20477927499124648) 100%);
+}
+
+.container::before {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    bottom: 8rem;
+    right: 15rem;
+    height: 200px;
+    width: 200px;
+    filter: blur(5px);
+    border-radius: 50%;
+    background: rgb(51, 153, 233);
+    background: linear-gradient(160deg, rgba(51, 153, 233, 0.8042190509016106) 22%, rgba(118, 69, 252, 0.20477927499124648) 100%);
+}
+
+.header {
+    background: linear-gradient(160deg, rgba(67, 167, 196, 0.9), rgba(29, 165, 253, 0.8), rgba(69, 171, 252, 0.35));
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.header p {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.body-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.left-sidebar,
+.right-sidebar {
+    width: 20%;
+}
+
+.left-sidebar h2,
+.right-sidebar h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.fac-details,
+.student-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mem-detail,
+.stu-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid #bdb8b8;
+}
+
+.img img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mem-detail p:nth-child(2),
+.stu-details p:nth-child(2) {
+    font-weight: 600;
+}
+
+.stu-details p:nth-child(3) {
+    text-align: center;
+}
+
+.center-container {
+    width: 60%;
+}
+
+.center1 {
+    border-bottom: 2px dashed #c3c5c8;
+}
+
+.center1 h2,
+.center2 h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.programs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.p-card {
+    width: 220px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(160deg, rgba(67, 113, 196, 0.9), rgba(29, 90, 253, 0.6), rgba(69, 202, 252, 0.1));
+}
+
+.p-card h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.p-card h3,
+.p-card p {
+    text-align: center;
+}
+
+.p-card p {
+    font-size: 0.9rem;
+}
+
+.center2 {
+    margin-bottom: 20px;
+}
+
+.center2 p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.footer p {
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width:767px) {
+
+    .container::before,
+    .container::after {
+        display: none;
+    }
+
+    .programs {
+        flex-wrap: wrap;
+    }
+
+    .body-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .center-container {
+        width: 100%;
+        order: -1;
+        border-bottom: 2px dashed #c3c5c8;
+    }
+
+    .left-sidebar {
+        width: 100%;
+        border-bottom: 2px dashed #c3c5c8;
+    }
+
+    .right-sidebar {
+        width: 100%;
+    }
+}
